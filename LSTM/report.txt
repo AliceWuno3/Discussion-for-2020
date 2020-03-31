@@ -1,0 +1,24 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 2 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: train.py
+--------------------------------------------------------------------------------
+train.py:49:11: WARNING: Using member tf.contrib.rnn.BasicLSTMCell in deprecated module tf.contrib.rnn. (Manual edit required) tf.contrib.rnn.* has been deprecated, and widely used cells/functions will be moved to tensorflow/addons repository. Please check it there and file Github issues if necessary.
+train.py:49:11: ERROR: Using member tf.contrib.rnn.BasicLSTMCell in deprecated module tf.contrib. tf.contrib.rnn.BasicLSTMCell cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'train.py'
+ outputting to 'tf2_train.py'
+--------------------------------------------------------------------------------
+
+38:0: INFO: Not upgrading symbols because `tensorflow.compat.v1` was directly imported as `tf`.
+49:11: WARNING: Using member tf.contrib.rnn.BasicLSTMCell in deprecated module tf.contrib.rnn. (Manual edit required) tf.contrib.rnn.* has been deprecated, and widely used cells/functions will be moved to tensorflow/addons repository. Please check it there and file Github issues if necessary.
+49:11: ERROR: Using member tf.contrib.rnn.BasicLSTMCell in deprecated module tf.contrib. tf.contrib.rnn.BasicLSTMCell cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+--------------------------------------------------------------------------------
+
